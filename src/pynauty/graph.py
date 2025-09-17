@@ -85,13 +85,9 @@ class Graph(object):
             key: a vertex, value: a list of vertices linked to the
             key vertex. Duplicate vertices will be removed, since there is no
             multigraph support.
-        '''
-        for v, vs in adjacency_dict.items():
-            self._check_vertices([v])
-            self._check_vertices(vs)
-        self._adjacency_dict = dict([(k,list(set(vs)))
-                                     for k,vs in adjacency_dict.items()])
-
+        '''        
+        self._adjacency_dict = adjacency_dict.copy()
+        
     def connect_vertex(self, v, neighbors):
         '''
         Connect a vertex to some other vertices.

@@ -45,3 +45,6 @@ src/nauty*/.DS_Store
 src/nauty*/.DS_Store
 src/nauty*/._.DS_Store
 src/nauty*/runalltests
+
+#
+src/pynauty/.ipynb_checkpoints
